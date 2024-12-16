@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="output.css" />
+    <script
+      src="https://kit.fontawesome.com/6a64b8b8a8.js"
+      crossorigin="anonymous"></script>
+  </head>
+  <body class="relative">
+    <header>
+      <button class="md:hidden p-5" id="menuButton">
+        <i class="fa fa-bars"></i>
+      </button>
+      <button class="hidden absolute z-10 left-0 p-5" id="menuClose">
+        <i class="fa fa-close"></i>
+      </button>
+      <nav>
+        <ul
+          class="hidden flex-col bg-slate-300 p-10 top-0 left-0 absolute md:flex md:space-x-2 md:flex-row md:p-0 md:bg-slate-50"
+          id="menuContent">
+          <li><a href="#">Hem</a></li>
+          <li><a href="#">Om oss</a></li>
+          <li><a href="#">Tjänster</a></li>
+          <li><a href="#">Kontakt</a></li>
+        </ul>
+      </nav>
+    </header>
+    <!-- <div id="accessibleModal">
+      <h2 id="modalTitle">Exempel på modalfönster</h2>
+      <p>Här är lite text i modalfönstret.</p>
+      <button id="closeModalBtn">Stäng</button>
+    </div> -->
+
+    <dialog id="accessibleDialog">
+      <h2>Exempel på tillgängligt modalfönster med &lt;dialog&gt;</h2>
+      <p>Här är innehållet i modalfönstret.</p>
+      <button id="closeDialogBtn">Stäng</button>
+    </dialog>
+    <script src="code.js"></script>
+  </body>
+</html>
