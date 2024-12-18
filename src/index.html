@@ -19,7 +19,9 @@
       </button>
       <nav>
         <ul
-          class="hidden flex-col bg-slate-300 p-10 top-0 left-0 absolute md:flex md:space-x-2 md:flex-row md:p-5 md:bg-white md:border md:w-svw"
+          aria-expanded="false"
+          aria-hidden="true"
+          class="hidden flex-col bg-slate-300 p-10 top-0 left-0 absolute md:flex md:space-x-2 md:flex-row md:p-5 md:bg-white md:w-svw"
           id="menuContent">
           <li><a href="#">Hem</a></li>
           <li><a href="#">Om oss</a></li>
@@ -28,17 +30,41 @@
         </ul>
       </nav>
     </header>
-    <!-- <div id="accessibleModal">
-      <h2 id="modalTitle">Exempel på modalfönster</h2>
-      <p>Här är lite text i modalfönstret.</p>
-      <button id="closeModalBtn">Stäng</button>
-    </div> -->
 
-    <dialog id="accessibleDialog">
-      <h2>Exempel på tillgängligt modalfönster med &lt;dialog&gt;</h2>
-      <p>Här är innehållet i modalfönstret.</p>
-      <button id="closeDialogBtn">Stäng</button>
-    </dialog>
+    <main class="md:pt-16 flex flex-col">
+      <button
+        class="border-2 border-black rounded-sm w-28 ml-5 hover:bg-slate-100"
+        id="openModalBtn">
+        Show Modal
+      </button>
+      <div
+        class="hidden p-5"
+        id="accessibleModal"
+        aria-hidden="true"
+        aria-labelledby="modalTitle"
+        aria-modal="true"
+        role="dialog">
+        <h2 id="modalTitle">Exempel på modalfönster</h2>
+        <p>Här är lite text i modalfönstret.</p>
+        <button class="border-2 border-black" id="closeModalBtn">Stäng</button>
+      </div>
+
+      <button
+        id="openDialogBtn"
+        class="border-2 ml-5 border-black rounded-sm w-28 hover:bg-slate-100 mt-3">
+        Show Dialog
+      </button>
+
+      <dialog class="border" id="accessibleDialog">
+        <h2 id="modalTitle">
+          Exempel på tillgängligt modalfönster med &lt;dialog&gt;
+        </h2>
+        <p>Här är innehållet i modalfönstret.</p>
+        <button class="p-4 border-2 border-black" id="closeDialogBtn">
+          Stäng
+        </button>
+      </dialog>
+    </main>
     <script src="code.js"></script>
   </body>
 </html>
