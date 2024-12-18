@@ -6,6 +6,7 @@ const menuContent = document.getElementById("menuContent");
 menuOpen.addEventListener("click", () => {
   menuContent.classList.toggle("hidden");
   menuClose.classList.toggle("hidden");
+  menuClose.focus();
 });
 
 menuClose.addEventListener("click", () => {
